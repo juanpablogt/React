@@ -46,6 +46,43 @@ const getUserActive= (name)=>({
 const userActive = getUserActive('Juan');
 console.log(userActive);
 
+//Destruccion de arreglos
+
+const person = ['Goku', 'Vegeta', 'Trunks'];
+const [ , , p3] = person;
+console.log(p3);
+
+//Destruccion de objetos
+
+const person2 = {
+    name: 'Juan',
+    age: 25,
+    key: 'ABC123'
+}
+
+const {name, age, key} = person2;
+console.log(name, age, key);
+
+const returnPerson = () => {
+    return['ABC', 123];
+}
+
+const [letters, numbers] = returnPerson();
+console.log(letters, numbers);
+
+//Tarea
+//1. El primer valor del arr se llamara nombre
+//2. se llamara setNombre
+
+const useState = (valor) => {
+    return [valor, ()=>{console.log('Hola Mundo')}];
+}
+
+const [nombre, setNombre] = useState('Goku');
+console.log(nombre);
+setNombre();
+
+
 
 
 
