@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+const apikey = 'NGv2bSa4V3T9Y6bUqHFhPSw0o4S8p9Nc';
+=======
 console.log('hallo welt!')
 
 //no se debe usar var
@@ -74,15 +77,26 @@ console.log(letters, numbers);
 //1. El primer valor del arr se llamara nombre
 //2. se llamara setNombre
 
-const useState = (valor) => {
+/* const useState = (valor) => {
     return [valor, ()=>{console.log('Hola Mundo')}];
 }
 
 const [nombre, setNombre] = useState('Goku');
 console.log(nombre);
 setNombre();
+ */
 
 
 
+>>>>>>> 9ef9294d24772270622c51e1df907295292cef9f
 
-
+const petcion = fetch('http://api.giphy.com/v1/gifs/random?api_key=' + apikey);
+petcion
+    .then(resp => resp.json())
+    .then(({ data }) => {
+        const { url } = data.images.original;
+        const img = document.createElement('img');
+        img.src = url;
+        document.body.append(img);
+    })
+    .catch(console.warn);
