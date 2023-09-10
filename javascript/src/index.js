@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+/* 
 const apikey = 'NGv2bSa4V3T9Y6bUqHFhPSw0o4S8p9Nc';
-=======
+
 console.log('hallo welt!')
 
 //no se debe usar var
@@ -85,10 +85,6 @@ const [nombre, setNombre] = useState('Goku');
 console.log(nombre);
 setNombre();
  */
-
-
-
->>>>>>> 9ef9294d24772270622c51e1df907295292cef9f
 
 const petcion = fetch('http://api.giphy.com/v1/gifs/random?api_key=' + apikey);
 petcion
